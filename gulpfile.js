@@ -5,8 +5,9 @@ var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
-var minifyCss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
+var imagemin = require('gulp-imagemin');
 var reload = browserSync.reload;
 
 
@@ -54,13 +55,20 @@ gulp.task('compress', function() {
 });
 
 // Minify CSS
-gulp.task('minify-css', function() {
+gulp.task('cleanCSS', function() {
   return gulp.src('css/styles.css')
   	.pipe(rename({suffix: ".min"}))
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(gulp.dest('css/'));
 });
 
+// Minify IMG
+gulp.task('img-minify', function() {
+  return gulp.src('src/img/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('img/'));
+});
+
 // All tasks together
 gulp.task('src-ver', ['browser-sync', 'watch', 'styles']);
-gulp.task('build', ['styles','jshint','compress']);
+gulp.task('build', ['styles','jshint','compress', 'img-minify']);

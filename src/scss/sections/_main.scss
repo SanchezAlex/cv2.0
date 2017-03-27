@@ -816,6 +816,9 @@ h1 {
       font-family: 'RobotoRegular', sans-serif;
       .form-fieldset {
         padding: 30px;
+        del {
+          color: #E91E63;
+        }
         .form-group {
           margin-top: 26px;
           .input-wrap {
@@ -1747,7 +1750,7 @@ p {
     display: none;
   }
   #about-me .about-me-text {
-    margin-top: 50px;
+    margin: 50px 10px;
   }
   #contact .contact-bp #address-map-main .address-contact .address-contact-hidden {
     display: none;
@@ -1763,6 +1766,9 @@ p {
   }
   section .block-education-left:first-child {
     margin-top: 70px;
+  }
+  #contact .contact-bp #address-map-main .address-contact .address-icon i {
+    padding-left: 0;
   }
 }
 

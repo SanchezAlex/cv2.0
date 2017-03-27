@@ -856,6 +856,8 @@ h1 {
       font-family: 'RobotoRegular', sans-serif; }
       #contact .contact-bp #feedback-form .form-fieldset {
         padding: 30px; }
+        #contact .contact-bp #feedback-form .form-fieldset del {
+          color: #E91E63; }
         #contact .contact-bp #feedback-form .form-fieldset .form-group {
           margin-top: 26px; }
           #contact .contact-bp #feedback-form .form-fieldset .form-group .input-wrap {
@@ -1481,7 +1483,7 @@ p {
   .header-container .scroll {
     display: none; }
   #about-me .about-me-text {
-    margin-top: 50px; }
+    margin: 50px 10px; }
   #contact .contact-bp #address-map-main .address-contact .address-contact-hidden {
     display: none; }
   .experience__wrap .experience-separator {
@@ -1491,7 +1493,9 @@ p {
   .experience__wrap .block-experience-right:nth-child(2) {
     margin-top: 100px; }
   section .block-education-left:first-child {
-    margin-top: 70px; } }
+    margin-top: 70px; }
+  #contact .contact-bp #address-map-main .address-contact .address-icon i {
+    padding-left: 0; } }
 
 /* ==========================================================================
    Helper classes
